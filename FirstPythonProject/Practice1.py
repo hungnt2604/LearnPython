@@ -26,11 +26,10 @@
 # else:
 #     print("Bạn sẽ thích khi cùng học với tôi !")
 
-
+import random
 print("-=TRÒ CHƠi=-")
 print("Tìm số may mắn của bạn.")
 exit_Choice = "AAA"
-
 
 def start_game():
     user_Choice = input("Hãy chọn một số bất kỳ từ 1 đến 4: ")
@@ -40,15 +39,23 @@ def start_game():
         print("Oops ! Bạn đã chọn trúng con số gần may mắn rồi đấy. Hảy thử lại nào !")
     elif user_Choice == "3":
         print("Bạn đã chọn gần đúng rồi. Hãy chọn thêm 1 số phụ nhé !")
-        number_Choice = input("Điền 1 hoậc 2: ")
-        if number_Choice == "1":
-            print("Bạn chọn nhầm rồi. Hãy bắt đầu lại từ đầu nào !")
-        elif number_Choice == "2":
-            print("Chúc mừng ! Bạn đã rất may mắn đấy.")
+        number = int(input("Bạn chọn số nào ?"))
+        if number == random.randint(1,10):
+            print("Bạn đã chiến thắng. Trò chơi kết thúc.")
         else:
-            print("Xin lỗi bạn đã không chọn 1 hoặc 2.")
-    else:
+            print("Bạn đã thua. Trò chơi kết thúc.")
+            random.
+        # number_Choice = input("Điền 1 hoậc 2: ")
+        # if number_Choice == "1":
+        #     print("Bạn chọn nhầm rồi. Hãy bắt đầu lại từ đầu nào !")
+        # elif number_Choice == "2":
+        #     print("Chúc mừng ! Bạn đã rất may mắn đấy.")
+        # else:
+        #     print("Xin lỗi bạn đã không chọn 1 hoặc 2.")
+    elif user_Choice == "4":
         print("Chúc bạn may mắn lần sau !")
+    else:
+        print("Xin lỗi bạn phải chọn một con số từ 1 đến 4 !")
 
 
 while exit_Choice != "Thoát":
